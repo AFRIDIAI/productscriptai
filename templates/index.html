@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Product Script Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/tips">Tips</a>
+        </nav>
+        
+        <h1>AI Product Script Generator</h1>
+        <p class="tagline">Create AI-powered product scripts for UGC ads in seconds—copy, paste, and go!</p>
+        
+        <!-- Input Section -->
+        <div class="input-section">
+            <textarea id="product-details" placeholder="Paste your product details here..." rows="10"></textarea>
+            <select id="script-size">
+                <option value="short">Short (~120 words)</option>
+                <option value="medium">Medium (~250 words)</option>
+                <option value="long">Long (~500 words)</option>
+            </select>
+            <button id="generate-btn">Generate Script</button>
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <span id="loading-message">Generating...</span>
+            </div>
+        </div>
+
+        <!-- HTML Script Output -->
+        <div id="scripts-output" class="scripts-output hidden">
+            <div class="script-section">
+                <h2 id="script-title">Your Script</h2>
+                <div class="script-content" id="selected-script"></div>
+                <button class="copy-btn" data-target="selected-script">Copy</button>
+                <button id="regenerate-btn" class="regenerate-btn hidden">Regenerate</button>
+                <div class="feedback">
+                    <label>Rate this script:</label>
+                    <div class="star-rating" data-type="selected">
+                        <span class="star" data-value="1">★</span>
+                        <span class="star" data-value="2">★</span>
+                        <span class="star" data-value="3">★</span>
+                        <span class="star" data-value="4">★</span>
+                        <span class="star" data-value="5">★</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
