@@ -23,10 +23,10 @@ def generate_script(product_details, length):
     
     # Rotating prompt variations for each length
     short_prompts = [
-        f"Write a short, punchy TikTok-style UGC ad script (~{word_counts['short']} words) that grabs attention, uses casual Gen Z slang, and ends with a strong call-to-action. No visual or voice-over advice. Based on: {product_details}",
-        f"Create a snappy, relatable UGC ad script (~{word_counts['short']} words) for TikTok, with a bold hook and chill vibe, pushing the product naturally. No visual or voice-over notes. Based on: {product_details}",
-        f"Generate a quick, hype TikTok UGC script (~{word_counts['short']} words) that’s all vibes, no fluff, with a dope call-to-action. No visual or voice-over stuff. Based on: {product_details}"
-    ]
+    f"Write a clear, casual TikTok-style UGC ad script (~{word_counts['short']} words) with a friendly opening, simple language about the product, and a direct call-to-action. Based on: {product_details}",
+    f"Create a short, easy-to-follow UGC script (~{word_counts['short']} words) for TikTok, highlighting the product’s best features in plain,clear and simple words, ending with a clear call-to-action. Based on: {product_details}",
+    f"Generate a quick, straightforward TikTok UGC script (~{word_counts['short']} words) that explains why the product’s great, using everyday language and a bold call-to-action. Based on: {product_details}"
+]
     
     medium_prompts = [
         f"Write a casual, engaging UGC ad script (~{word_counts['medium']} words) blending a TikTok hook with some personal flair, keeping it real and ending with a call-to-action. No visual or voice-over advice. Based on: {product_details}",
